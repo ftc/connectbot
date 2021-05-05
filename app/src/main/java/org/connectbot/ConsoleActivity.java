@@ -1112,7 +1112,11 @@ public class ConsoleActivity extends AppCompatActivity implements BridgeDisconne
 			setDisplayedTerminal(requestedIndex);
 		}
 	}
-
+	@Override
+	public void onDestroy() {
+		super.onDestroy();
+		hideEmulatedKeys();
+	}
 	@Override
 	public void onStop() {
 		super.onStop();
